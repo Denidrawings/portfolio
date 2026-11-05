@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env.local
+reference*
+*.log
+.npm-cache/
+sample.png

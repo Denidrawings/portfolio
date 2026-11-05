@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta name="description" content="Deni's portfolio. A collection of illustrations, characters, and imagined worlds." />
+    <title>Deni — Illustration & Characters</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Skip to content</a>
+    <header class="header">
+      <a href="#" class="wordmark" aria-label="Deni, home">Deni</a>
+      <nav aria-label="Main navigation">
+        <a href="#trabalhos" class="nav-link active">Portfolio <span>↗</span></a>
+        <a href="#sobre" class="nav-link">About</a>
+        <a href="#contato" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-social"><span class="header-note">DIGITAL ART & IMAGINATION</span><div class="social-links"><a class="social-link" href="https://www.reddit.com/user/Deni-Vasconcelos/" target="_blank" rel="noopener noreferrer" aria-label="Deni on Reddit (opens in a new tab)"><img src="/reddit.svg" width="24" height="24" alt="" /></a><a class="social-link" href="https://discord.com/users/289439806893850624" target="_blank" rel="noopener noreferrer" aria-label="Deni on Discord (opens in a new tab)"><img src="/discord.svg" width="24" height="24" alt="" /></a><a class="social-link" href="mailto:denidrawing0@gmail.com?subject=Illustration%20inquiry&amp;body=Hi%20Deni%2C%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20would%20love%20to%20discuss%20an%20illustration%20project%20with%20you.%0D%0A%0D%0AProject%20details%3A%0D%0A%0D%0AThank%20you%21" aria-label="Email Deni"><img src="/email.svg" width="24" height="24" alt="" /></a></div></div>
+    </header>
+    <main id="conteudo">
+      <section id="trabalhos" class="works" aria-label="Selected work">
+        <div class="gallery-bar"><span class="view-note">SELECTED WORK <span>↙</span></span></div>
+        <p id="status" class="status" role="status">Loading projects…</p>
+        <div id="galeria" class="gallery" aria-busy="true"></div>
+        <button id="retry" class="text-button" hidden>Try again ↻</button>
+        <div class="gallery-end"><span>MADE OF IDEAS, LINES, AND COLOR.</span><a href="#trabalhos">Back to top ↑</a></div>
+      </section>
+      <section id="sobre" class="about"><div class="eyebrow">A LITTLE ABOUT ME</div><div><h2>Hi, I'm <em>Deni.</em></h2><p>This is my creative space: a collection of illustrations exploring characters, fantasy, and new ways to imagine.</p><p>Step inside and discover the worlds that come to life in every drawing.</p></div></section>
+      <footer id="contato"><div><span class="eyebrow">LET'S TALK</span><h2>An idea can become<br>a whole new <em>universe.</em></h2><dl class="contact-details"><div><dt>Discord</dt><dd><a href="https://discord.com/users/289439806893850624" target="_blank" rel="noopener noreferrer">daniel99v</a></dd></div><div><dt>Email</dt><dd><a href="mailto:denidrawing0@gmail.com">denidrawing0@gmail.com</a></dd></div></dl><div class="social-links"><a class="social-link" href="https://www.reddit.com/user/Deni-Vasconcelos/" target="_blank" rel="noopener noreferrer" aria-label="Deni on Reddit (opens in a new tab)"><img src="/reddit.svg" width="24" height="24" alt="" /></a><a class="social-link" href="https://discord.com/users/289439806893850624" target="_blank" rel="noopener noreferrer" aria-label="Deni on Discord (opens in a new tab)"><img src="/discord.svg" width="24" height="24" alt="" /></a><a class="social-link" href="mailto:denidrawing0@gmail.com?subject=Illustration%20inquiry&amp;body=Hi%20Deni%2C%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20would%20love%20to%20discuss%20an%20illustration%20project%20with%20you.%0D%0A%0D%0AProject%20details%3A%0D%0A%0D%0AThank%20you%21" aria-label="Email Deni"><img src="/email.svg" width="24" height="24" alt="" /></a></div></div><div class="footer-bottom"><a href="#" class="wordmark">Deni</a><span>ILLUSTRATION & CHARACTERS</span><span>© <span id="year"></span> Deni</span></div></footer>
+    </main>
+    <dialog id="viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><span id="viewer-counter"></span><button id="close-viewer" aria-label="Close project">Close <span>×</span></button></div><div class="viewer-content"><button id="previous" class="viewer-arrow" aria-label="Previous project">←</button><figure><div id="project-images"></div><figcaption><div><span class="eyebrow" id="viewer-category"></span><h2 id="viewer-title"></h2></div><a id="original-link" target="_blank" rel="noopener noreferrer">Open cover ↗</a></figcaption></figure><button id="next" class="viewer-arrow" aria-label="Next project">→</button></div><p class="viewer-hint">Use arrow keys to explore · ESC to close</p></dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+
