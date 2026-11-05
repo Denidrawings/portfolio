@@ -9,17 +9,17 @@
 @keyframes shimmer{to{transform:translateX(100%)}}@keyframes loading-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.artwork.is-loading .artwork-image::before{animation:none;transform:none;opacity:.4}.artwork.is-loading .artwork-image::after,dialog.is-loading .viewer-content figure::after{animation:none}}
 .load-more:disabled{cursor:wait;opacity:.7;display:flex;align-items:center;gap:12px}.load-more:disabled::before{content:'';width:15px;height:15px;border:2px solid #a0af7140;border-top-color:#768646;border-radius:50%;animation:loading-spin .9s linear infinite}.filter:disabled{cursor:wait;opacity:.6}@media(prefers-reduced-motion:reduce){.load-more:disabled::before{animation:none}}
-/* Natural image proportions in balanced, wrapping rows. */
+/* Uniform square thumbnails based on the existing gallery covers. */
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:28px 22px}
 .artwork{width:100%;max-width:100%;min-width:0}
 .artwork:nth-child(3n){grid-column:auto}
-.artwork .artwork-image{display:block;aspect-ratio:auto;background:transparent;border-radius:0;overflow:hidden}
+.artwork .artwork-image{display:block;aspect-ratio:1;background:transparent;border-radius:0;overflow:hidden}
 .artwork:nth-child(3n+2) .artwork-image{background:transparent}
-.artwork img{height:auto;width:100%;object-fit:contain}
+.artwork img{height:100%;width:100%;object-fit:cover}
 .artwork:hover img{transform:none}
 .artwork.is-loading .artwork-image::before,.artwork.is-loading .artwork-image::after,.load-more:disabled::before,dialog.is-loading .viewer-content figure::after{display:none}
 .load-more:disabled{visibility:hidden}
-@media(max-width:540px){.gallery{gap:32px 12px}.artwork{min-width:0}.artwork .artwork-image{aspect-ratio:auto}}
+@media(max-width:540px){.gallery{gap:32px 12px}.artwork{min-width:0}.artwork .artwork-image{aspect-ratio:1}}
 .status.initial-loading{display:flex;align-items:center;justify-content:center;gap:12px;min-height:180px}
 .status.initial-loading::before{content:'';width:22px;height:22px;flex-shrink:0;border:2px solid #a0af7140;border-top-color:#768646;border-radius:50%;animation:loading-spin .9s linear infinite}
 @media(prefers-reduced-motion:reduce){.status.initial-loading::before{animation:none}}
