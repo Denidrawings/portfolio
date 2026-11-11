@@ -9,7 +9,7 @@ function imageFiles(directory, pattern = imagePattern) {
   if (!existsSync(directory)) return [];
   return readdirSync(directory, { withFileTypes: true }).filter(entry => entry.isFile() && pattern.test(entry.name)).map(entry => entry.name).sort(sortNames);
 }
-const base = process.env.GITHUB_ACTIONS === 'true' ? '/portifolio/' : '/';
+const base = process.env.GITHUB_ACTIONS === 'true' ? '/portfolio/' : '/';
 const url = (...parts) => base + 'gallery/' + parts.map(encodeURIComponent).join('/');
 function projects() {
   return imageFiles(root).map(name => {
