@@ -1,4 +1,4 @@
-﻿# Portfólio Deni
+# Portfólio Deni
 
 Site estático com Vite. Todas as imagens ficam em public/gallery. Não usa API, chave ou Google Drive.
 
@@ -24,8 +24,9 @@ O Vite identifica os arquivos no desenvolvimento e ao gerar o build. Adicionar o
 
 A galeria começa com três capas e carrega mais três por vez pelo botão ou scroll. Cada linha exibe três imagens. As setas do detalhe navegam entre trabalhos e Escape fecha.
 
-Os filtros classificam nomes com Sasuke, Gardevoir e Heather como fan art; os demais são personagens originais. Ajuste category em src/main.js conforme necessário. Revise textos e contatos provisórios antes de publicar.
 
 ## Publicação
+
+As pastas dos projetos também aceitam vídeos MP4, WebM, OGV e M4V, misturados às imagens e ordenados pelo nome. As capas na raiz continuam sendo imagens. Os vídeos são exibidos sem som, com reprodução automática e em loop; clique no vídeo para pausar ou continuar. A reprodução para ao fechar o visualizador ou trocar de projeto. A compatibilidade depende do formato e do codec suportados pelo navegador.
 
 Execute npm.cmd run build e publique dist em uma hospedagem estática. O site usa Google Fonts com fontes locais de reserva.

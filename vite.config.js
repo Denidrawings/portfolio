@@ -5,16 +5,16 @@ import { resolve, extname, basename, join, relative } from 'node:path';
 const imagePattern = /\.(png|jpe?g|webp|avif|gif)$/i;
 const sortNames = (a, b) => a.localeCompare(b, 'pt-BR', { numeric: true });
 const root = resolve('public/gallery');
-function imageFiles(directory) {
+function imageFiles(directory, pattern = imagePattern) {
   if (!existsSync(directory)) return [];
-  return readdirSync(directory, { withFileTypes: true }).filter(entry => entry.isFile() && imagePattern.test(entry.name)).map(entry => entry.name).sort(sortNames);
+  return readdirSync(directory, { withFileTypes: true }).filter(entry => entry.isFile() && pattern.test(entry.name)).map(entry => entry.name).sort(sortNames);
 }
 const base = process.env.GITHUB_ACTIONS === 'true' ? '/portifolio/' : '/';
 const url = (...parts) => base + 'gallery/' + parts.map(encodeURIComponent).join('/');
 function projects() {
   return imageFiles(root).map(name => {
     const id = basename(name, extname(name));
-    const images = imageFiles(join(root, id)).map(image => url(id, image));
+    const images = imageFiles(join(root, id), /\.(png|jpe?g|webp|avif|gif|mp4|webm|ogv|m4v)$/i).map(image => url(id, image));
     return { id, name, localURL: url(name), images: images.length ? images : [url(name)] };
   });
 }
