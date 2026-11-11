@@ -13,6 +13,7 @@ let visible = [];
 let currentIndex = 0;
 let lastTrigger;
 const pageSize = 3;
+const portraitThreshold = 1.15;
 let displayLimit = 3;
 let batchLoading = false;
 let autoLoadEnabled = true;
@@ -257,12 +258,12 @@ async function openWork(index) {
     zoomButton.type = 'button';
     zoomButton.className = 'project-image-zoom';
     image.addEventListener('load', () => {
-      zoomButton.classList.toggle('is-portrait', image.naturalHeight >= image.naturalWidth * 1.3);
+      zoomButton.classList.toggle('is-portrait', image.naturalHeight >= image.naturalWidth * portraitThreshold);
       positionGalleryNavigation();
     });
     if (index !== 0) image.src = url;
     if (image.complete && image.naturalWidth) {
-      zoomButton.classList.toggle('is-portrait', image.naturalHeight >= image.naturalWidth * 1.3);
+      zoomButton.classList.toggle('is-portrait', image.naturalHeight >= image.naturalWidth * portraitThreshold);
     }
     zoomButton.setAttribute('aria-label', 'Enlarge image');
     zoomButton.setAttribute('aria-pressed', 'false');

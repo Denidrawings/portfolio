@@ -20,9 +20,12 @@
 .header .social-link{background:#0003}
 .header .social-link:hover{background:#0006}
 .header .social-link img{filter:brightness(0) invert(1)}
+.header .wordmark{position:relative;z-index:2;width:clamp(76px,8vw,104px);height:clamp(76px,8vw,104px);flex:0 0 auto;transform:translateY(34px)}
+.header .wordmark img{display:block;width:100%;height:100%;border-radius:50%;background:#f7f7f2;object-fit:cover}
 @media(min-width:768px){
   .header{justify-content:flex-start;gap:clamp(20px,2vw,32px)}
   .header nav{justify-content:flex-start}
+  .header .wordmark{width:clamp(96px,10vw,128px);height:clamp(96px,10vw,128px)}
   .header .nav-link{font-size:clamp(14px,1.1vw,20px)}
   .header-social{margin-left:auto}
 }
